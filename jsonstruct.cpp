@@ -75,7 +75,13 @@ int main(int argc, char** argv) {
     std::istream& is = ((inFile.length()) ? fileIn : std::cin);
     std::ostream& os = ((outFile.length()) ? fileOut : std::cout);
     
-    parseJsonFile(is, os);
+    if (is && os) {
+        parseJsonFile(is, os);
+    }
+    else {
+        std::cerr << "Error: " << strerror(errno) << std::endl;
+        return 1;
+    }
 
     return 0;
 }

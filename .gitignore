@@ -35,3 +35,6 @@
 # Misc files
 Postsecondary_School_Locations_-_Current.geojson
 jsonstruct
+workspace.code-workspace
+.vscode
+jsonstruct.dSYM
